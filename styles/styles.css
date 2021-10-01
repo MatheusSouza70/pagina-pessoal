@@ -365,6 +365,9 @@ body {
 
 #abouttext {
     font-size: 120%;
+    border-style: groove;
+    border-color: #111;
+    background-color:rgb(49, 49, 49);
 }
 
 
