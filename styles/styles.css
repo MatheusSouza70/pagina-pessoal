@@ -1,0 +1,374 @@
+/* pagina principal */
+
+body,
+html {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    scroll-behavior: smooth;
+    /* movimento suave do mouse*/
+}
+
+
+/* Menu Inicio, Contato, Projetos, Sobre */
+
+.navigation {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    list-style: none;
+    background: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation a:hover {
+    background: grey;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+@media all and (max-width: 1000px) {
+    .navigation {
+        justify-content: space-around;
+        margin: 0%;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0px;
+    }
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+.main {
+    position: fixed;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    transition: color 0.5s ease-out;
+    width: 100%;
+    padding: 0px;
+    color: white;
+    text-align: center;
+    font-size: 135%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#copyright {
+    font-size: 70%;
+}
+
+
+/* Video da página*/
+
+#video {
+    position: center;
+    right: 0%;
+    margin: 0%;
+    padding: 0%;
+    bottom: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 66%
+}
+
+body {
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    padding-top: 0em;
+}
+
+* {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* pagina principal */
+
+
+/* ------------------------------- */
+
+
+/* projetos */
+
+
+/* nodos de projeto */
+
+.flex-container {
+    display: -webkit-flex;
+    padding: 0px;
+    margin: 0px;
+    color: transparent;
+    position: absolute;
+    bottom: 75%;
+    right: 20%;
+    list-style: none;
+}
+
+.flex-item {
+    align-items: center;
+    background: transparent;
+    padding: 2px;
+    width: 275px;
+    height: 100px;
+    margin-top: 10px;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: space-evenly;
+}
+
+.mainprojetos {
+    text-align: center;
+    padding: 0px;
+}
+
+
+/* botão que brilha */
+
+.glow-on-hover {
+    align-items: center;
+    width: 190px;
+    height: 150px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: "";
+    background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    background: transparent;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow-on-hover-about {
+    width: 400px;
+    height: 200px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover-about:before {
+    content: "";
+    background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.glow-on-hover-about:active {
+    background: transparent;
+}
+
+.glow-on-hover-about:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-about:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover-about:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* botão de que brilha */
+
+
+/* projetos */
+
+
+/* ------------------------------- */
+
+
+/* contato */
+
+.flex-container-contato {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: grey;
+    position: absolute;
+    bottom: 35%;
+    left: 41%;
+    list-style: none;
+}
+
+.flex-image {
+    align-items: center;
+    background: transparent;
+    padding: 0px;
+    width: 350px;
+    height: 250px;
+    margin-top: 5px;
+    line-height: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 5.2em;
+}
+
+#email {
+    font-size: 25%
+}
+
+
+/* contato */
+
+
+/* ------------------------------- */
+
+
+/* sobre */
+
+.flex-container-about {
+    justify-content: flex-end;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 30%;
+    left: 46%;
+    list-style: none;
+}
+
+.flex-container-about p {
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+#img {
+    justify-content: flex-end;
+    flex-direction: row row-reverse;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    opacity: 89%;
+    filter: saturate(0);
+    border-style: solid;
+    color: black;
+}
+
+#abouttext {
+    font-size: 120%;
+}
+
+
+/* sobre */
+
+
+/* ------------------------------- */
